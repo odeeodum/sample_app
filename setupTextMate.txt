@@ -1,0 +1,30 @@
+21.1 Shell / Terminal
+
+Mac OS X comes with an open shell command which can be used to simulate a double click from within Terminal. It can also perform an Open With… operation by use of the -a argument, e.g.: open -a TextMate . will open the current folder in TextMate (as a scratch project).
+
+This standard command has a few shortcomings: it can only open one file at a time, it cannot open a document at a specific line and it cannot “stall” the shell until the file has been closed, which is useful e.g. when using an editor to write something like a subversion commit message.
+
+For this reason TextMate comes with its own mate shell command, which supersedes the open command. For usage instructions you can run mate -h (from Terminal).
+
+The mate command is located inside the TextMate application bundle and it is recommended that you create a symbolic link which points to the command (rather than “install” it), so that if the command is updated in the future, you will not need to reinstall the updated command.
+
+Creating a symbolic link can either be done by selecting Help → Terminal Usage… from the menu, or from the shell by running something like the following:
+
+ln -s /Applications/TextMate.app/Contents/Resources/mate ~/bin/mate
+This assumes that you have ~/bin created and in your path and that TextMate is installed in /Applications.
+
+After having created this link, you may want to setup a few shell variables to make other applications use TextMate as an external editor.
+
+21.1.1 The General EDITOR Variable
+
+The EDITOR variable is used by many shell commands, like svn (subversion) and CVS. To use TextMate as the editor for the EDITOR variable, set it like this (for bash and zsh users e.g. in ~/.bash_profile or ~/.zshrc):
+
+export EDITOR='mate -w'
+We add the -w argument to make the command wait for TextMate to close the file, before continuing.
+
+There is one command which does not support giving arguments in the EDITOR variable, it is crontab (which is sort of obsoleted by launchd). If you need to use it, you can create a symbolic link to mate with a _wait suffix which implies -w. For example:
+
+ln -s mate ~/bin/mate_wait   # run this once to create the link
+export EDITOR='mate_wait'    # use in your ~/.bash_profile'
+
+Get theme here http://railscasts.com/about
