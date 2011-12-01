@@ -28,3 +28,5 @@ ln -s mate ~/bin/mate_wait   # run this once to create the link
 export EDITOR='mate_wait'    # use in your ~/.bash_profile'
 
 Get theme here http://railscasts.com/about
+
+On page 82
