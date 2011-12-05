@@ -29,4 +29,4 @@ export EDITOR='mate_wait'    # use in your ~/.bash_profile'
 
 Get theme here http://railscasts.com/about
 
-On page 92
+On page 137
