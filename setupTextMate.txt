@@ -29,4 +29,7 @@ export EDITOR='mate_wait'    # use in your ~/.bash_profile'
 
 Get theme here http://railscasts.com/about
 
-On page 137
+On page 154
+
+For more on Ruby classes and the self keyword, see the RailsTips post on “Class and Instance Variables
+in Ruby”.
