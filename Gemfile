@@ -17,6 +17,7 @@ group :development do
   gem 'spork'
   gem 'guard-spork'
   gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+  gem 'wirble'
 end
 
 group :test do

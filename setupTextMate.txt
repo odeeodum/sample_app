@@ -42,3 +42,35 @@ Initial problem with installing and using the annotate-models gem
 
 Another link for overcoming the annotate gem problem suggested by the author
 	http://stackoverflow.com/questions/7295505/annotate-gem-and-rails-3-1
+	
+	
+  ## .irbrc
+
+  ## tab-tab completion, colorizing
+  begin
+
+    # load wirble
+    require 'wirble'
+
+    # start wirble (with color)
+    Wirble.init
+    Wirble.colorize
+
+    colors = Wirble::Colorize.colors.merge({
+      :object_class   => :purple,
+      :symbol         => :purple,
+      :symbol_prefix  => :purple
+    })
+    Wirble::Colorize.colors = colors
+    rescue LoadError => err
+      warn "Couldn't load Wirble: #{err}"
+  end
+
+  ## so you can run pp
+  require 'pp'
+
+  ## auto indent
+  IRB.conf[:AUTO_INDENT]=true
+
+  ## Set prompt to default instead of RVM
+  IRB.conf[:PROMPT_MODE] = :DEFAULT
