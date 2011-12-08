@@ -8,7 +8,7 @@ gem 'rails', '3.1.3'
 gem 'sqlite3'
 
 group :development do
-  gem 'rspec-rails', '2.0.1'
+  gem 'rspec-rails', '2.6.1.beta1'
   gem 'guard'
   gem 'rb-inotify', :require => false
   gem 'rb-fsevent', :require => false
@@ -16,10 +16,11 @@ group :development do
   gem 'growl_notify'
   gem 'spork'
   gem 'guard-spork'
+  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
 end
 
 group :test do
-  gem 'rspec', '2.0.1'
+  gem 'rspec', '2.6'
   gem 'webrat', '0.7.1'
 end
 

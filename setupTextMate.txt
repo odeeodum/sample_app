@@ -33,3 +33,12 @@ On page 154
 
 For more on Ruby classes and the self keyword, see the RailsTips post on “Class and Instance Variables
 in Ruby”.
+
+Here is a link for fixing the rake db:migrate error
+	http://stackoverflow.com/questions/7405011/problem-migrating-w-sqlite3-receive-error-message-undefined-method-prerequi
+	
+Initial problem with installing and using the annotate-models gem
+	http://news.railstutorial.org/
+
+Another link for overcoming the annotate gem problem suggested by the author
+	http://stackoverflow.com/questions/7295505/annotate-gem-and-rails-3-1
