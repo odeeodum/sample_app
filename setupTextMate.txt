@@ -46,31 +46,31 @@ Another link for overcoming the annotate gem problem suggested by the author
 	
   ## .irbrc
 
-  ## tab-tab completion, colorizing
-  begin
+## tab-tab completion, colorizing
+begin
 
-    # load wirble
-    require 'wirble'
+  # load wirble
+  require 'wirble'
 
-    # start wirble (with color)
-    Wirble.init
-    Wirble.colorize
+  # start wirble (with color)
+  Wirble.init
+  Wirble.colorize
 
-    colors = Wirble::Colorize.colors.merge({
-      :object_class   => :purple,
-      :symbol         => :purple,
-      :symbol_prefix  => :purple
-    })
-    Wirble::Colorize.colors = colors
-    rescue LoadError => err
-      warn "Couldn't load Wirble: #{err}"
-  end
+  colors = Wirble::Colorize.colors.merge({
+    :object_class   => :purple,
+    :symbol         => :purple,
+    :symbol_prefix  => :purple
+  })
+  Wirble::Colorize.colors = colors
+  rescue LoadError => err
+    warn "Couldn't load Wirble: #{err}"
+end
 
-  ## so you can run pp
-  require 'pp'
+## so you can run pp
+require 'pp'
 
-  ## auto indent
-  IRB.conf[:AUTO_INDENT]=true
+## auto indent
+IRB.conf[:AUTO_INDENT]=true
 
-  ## Set prompt to default instead of RVM
-  IRB.conf[:PROMPT_MODE] = :DEFAULT
+## Set prompt to default instead of RVM
+IRB.conf[:PROMPT_MODE] = :DEFAULT
